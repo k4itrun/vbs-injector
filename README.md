@@ -21,7 +21,7 @@ We welcome your contributions to this project! If you have suggestions or improv
 If you’d like to support the development of this project, consider leaving a star ⭐ or making a donation. Every bit of support is greatly appreciated!
 
 ## Contact
-For inquiries, reach out at [contact@w1sh.xyz](mailto:contact@w1sh.xyz) or join our [Discord Server](https://discord.gg/XS6btuuUR7).
+For inquiries, reach out at [billoneta@proto.me](mailto:billoneta@proto.me) or join our [Discord Server](https://discord.gg/XS6btuuUR7).
 
 ## License
 This software is licensed under the [MIT License](LICENSE).
