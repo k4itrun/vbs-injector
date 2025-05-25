@@ -12,7 +12,7 @@ The real purpose of all this is done through [Discord injection](https://github.
 
 ### Reporting Issues
 
-If you encounter any bugs or problems while using the tool, please open a [new Issue here](https://github.com/k4itrun/erisphisher/issues).
+If you encounter any bugs or problems while using the tool, please open a [new Issue here](https://github.com/k4itrun/vbs-injector/issues).
 To help us assist you faster, include as much detail as possible, such as:
 
 - What you were trying to do.
@@ -25,10 +25,10 @@ The more info you provide, the quicker we can identify and fix the problem.
 
 Thanks for wanting to contribute! To submit improvements or fixes, please follow these steps:
 
-1. Clone [this repository](https://github.com/k4itrun/erisphisher.git) using `git clone https://github.com/k4itrun/erisphisher.git`.
+1. Clone [this repository](https://github.com/k4itrun/vbs-injector.git) using `git clone https://github.com/k4itrun/vbs-injector.git`.
 2. Create a new branch from `main` with a clear, descriptive name, for example: `git checkout -b feature/your-feature-name`.
 3. Make your changes and commit them with clear, meaningful messages.
-4. Open a [new Pull Request here](https://github.com/k4itrun/erisphisher/pulls), explaining what you added or fixed and why.
+4. Open a [new Pull Request here](https://github.com/k4itrun/vbs-injector/pulls), explaining what you added or fixed and why.
 
 We’ll carefully review each PR and provide feedback if needed to help you get it merged.
 
